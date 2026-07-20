@@ -1,10 +1,6 @@
 # Escaner de Red Nmap Calamar
 
-![Docker](https://img.shields.io/badge/Dy-blue
-![Node.js](https://img.shieldsode.js-Backend-green
-![Nmap](https://img.shields.io/badge/Nmap-7ge
-![License](https://img.shields.io/badge/License-MInterfaz web para ejecutar escaneos Nmap desde el navegador en tiempo real.
-
+Desarrollo creado con fines educativos, cuyo diseño rinde homenaje al mejor club del mundo: el Club Atlético Platense (Argentina)
 Permite ejecutar perfiles de Nmap, lanzar comandos personalizados, visualizar resultados en vivo mediante WebSockets, cancelar escaneos en ejecución y exportar resultados en PDF.
 
 ---
