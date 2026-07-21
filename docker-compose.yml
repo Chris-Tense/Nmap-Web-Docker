@@ -1,0 +1,16 @@
+services:
+
+  nmap-web:
+
+    image: nmap-web:latest
+    
+    container_name: nmap-web-calamar
+
+    ports:
+      - "5500:5500"
+    
+    cap_add:
+      - NET_RAW
+      - NET_ADMIN
+     
+    restart: unless-stopped

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="icon" href="platense1.png">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Escaner de red Web</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+       <div class="header">
+
+            <h1>Escaner de Red (Nmap)</h1>
+
+            <img
+                src="platense1.png"
+                alt="Platense"
+                class="logo">
+
+        </div>
+
+        <div class="toolbar">
+
+            <input
+                id="target"
+                type="text"
+                placeholder="192.168.1.1">
+
+            <select id="profile">
+                <option>Regular scan</option>
+                <option>Quick Scan</option>
+                <option>Intense Scan</option>
+                <option>Intense scan plus UDP</option>
+                <option>Service Scan</option>
+                <option>OS Detection</option>
+                <option>Intense scan, all TCP ports</option>
+                <option>Intense scan, no ping</option>
+                <option>Ping scan</option>
+                <option>Quick scan plus</option>
+                <option>Quick traceroute</option>
+                <option>Slow comprehensive scan</option>
+                <option>NSE HTTP Title</option>
+                <option>NSE SSL Certificate</option>
+                <option>NSE SMB Discovery</option>
+                <option>NSE Vulnerability Scan</option>
+            </select>
+
+            <button onclick="scanHost()">
+                Escanear
+            </button>
+
+            <button onclick="cancelScan()">
+                Cancelar
+            </button>
+
+            <button onclick="clearScreen()">
+                Limpiar
+            </button>
+            
+            <button onclick="downloadPDF()">
+                Descargar PDF
+            </button>
+
+        </div>
+
+        <div class="command">
+
+            <label for="command">
+                Comando personalizado (opcional)
+            </label>
+
+            <textarea
+                id="command"
+                rows="3"
+                placeholder="Ejemplo: nmap -sV -Pn 192.168.1.1"></textarea>
+
+        </div>
+
+        <div class="status">
+
+            <label for="status">
+                Estado
+            </label>
+
+            <input
+                id="status"
+                type="text"
+                value="Listo"
+                readonly>
+
+        </div>
+
+        <div class="progress-container">
+
+            <label for="progress">
+                Progreso:
+                <span id="progressText">0%</span>
+            </label>
+
+            <progress
+                id="progress"
+                value="0"
+                max="100">
+            </progress>
+
+        </div>
+
+        <h3>Resultado</h3>
+
+        <pre id="result"></pre>
+
+    </div>
+
+    <script src="app.js"></script>
+
+    <footer>
+
+    Desarrollado por
+    <strong>chris-tense</strong>
+    (Christian Iacobellis - https://github.com/Chris-Tense)
+
+    </footer>
+
+</body>
+
+</html>
